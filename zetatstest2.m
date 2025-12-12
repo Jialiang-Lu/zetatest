@@ -39,6 +39,7 @@ function [dblZetaP,sZETA] = zetatstest2(vecTime1,vecValue1,matEventTimes1,vecTim
 	%Version history:
 	%1.0 - 2023 October 19
 	%	Final release candidate [Created by Jorrit Montijn]
+	import spiky.utils.zetatest.dependencies.*
 	
 	%% prep data
 	%check inputs

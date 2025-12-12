@@ -45,6 +45,7 @@ function [dblZetaP,sZETA] = zetatest2(vecSpikeTimes1,matEventTimes1,vecSpikeTime
 	%1.1 - 2023 November 9
 	%	Considerable speed-up (~33% computation time) using lininterp1f.c by Umberto Picchini and
 	%	a modified getUniqueSpikes that circumvents the use of unique() [by JM]
+	import spiky.utils.zetatest.dependencies.*
 	
 	%% prep data
 	%ensure orientation

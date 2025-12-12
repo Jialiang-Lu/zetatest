@@ -122,6 +122,7 @@ function [dblZetaP,sZETA,sRate,sLatencies] = zetatest(vecSpikeTimes,matEventTime
 	%   Updated documentation [by JM]
 	%3.8 - 23 Oct 2023
 	%   Moved plotting to separate subfunction [by JM]
+	import spiky.utils.zetatest.dependencies.*
 	
 	%% prep data
 	%ensure orientation
@@ -185,10 +186,11 @@ function [dblZetaP,sZETA,sRate,sLatencies] = zetatest(vecSpikeTimes,matEventTime
 		boolUseParallel = [];
 		[vecSpikeT,vecRealDiff,vecRealFrac,vecRealFracLinear,cellRandT,cellRandDiff,dblZetaP,dblZETA,intZETALoc] = ...
 			calcZetaOne(vecSpikeTimes,vecEventStarts,dblUseMaxDur,intResampNum,boolDirectQuantile,dblJitterSize,boolStitch,boolUseParallel);
-	else
+    end
+    if ~exist("vecSpikeT", "var") || length(vecSpikeT)<8
 		intZETALoc = nan;
 		vecEventStarts = [];
-	end
+    end
 	
 	%% build placeholder outputs
 	sZETA = [];

@@ -50,6 +50,7 @@ function [dblZetaP,sZETA] = zetatstest(vecTime,vecData,matEventTimes,dblUseMaxDu
 	%	Improved computation time, now computes at about 66% duration
 	%1.4 - 2023 October 19
 	%	Updated outputs and documentation
+	import spiky.utils.zetatest.dependencies.*
 	
 	%% prep data
 	%ensure orientation
